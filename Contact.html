@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title> AIL Contacts </title>
+  <link rel="shortcut icon" href="AIL.png" type="image/x-icon">
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  
+    nav{
+      width: 100%;
+      height: 40px;
+      background-color: purple; 
+      text-align: center    
+    }
+
+    nav b{
+      font-size: 150%;
+      color: rgb(9, 232, 9);
+      transition: 1s;
+    }
+
+    nav b:hover{
+      font-size: 155%;
+    }
+    
+    nav li{
+      display: inline-block;
+      margin: 10px;
+      font-size: 20px;
+      text-align: right;
+    }
+    
+    nav a{
+      text-decoration: none;
+      color: white;
+      transition: 1s;
+    }
+
+    nav a:hover{
+      color: blue;
+      font-size: 22px;
+    }
+    
+    .dropdown{
+      width: 350px;
+      display: none;
+      position: absolute;
+      z-index: 999;
+      background-color: darkslategrey;
+    }
+
+    .dropdown li{
+      display: block;
+      text-align: center;
+    }
+
+    .dropdown a{
+      font-size: 25px;
+      color: yellow;
+      transition: 1s;
+    }
+
+    .dropdown a:hover{
+      color: deeppink;
+    }
+
+    ul li:hover .dropdown{
+      display: block;
+    }
+    
+    .scroll{
+      width: 100%;
+      background-color: blue;
+    }
+    
+    .scroll img{
+      width: 80px;
+      height: 80px;
+    }
+    
+    h1{
+      text-align: center;
+      color: blue;
+    }
+    
+    p{
+      margin-left: 10px;
+      font-size: 30px;
+    }
+
+    .main{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .main a{
+        text-decoration: none;
+        color: black;
+    }
+
+    .sub-main{
+      width: 48%;
+      margin: 8px;
+      margin-top: 15px;
+      text-align: center;
+    }
+
+    .sub-main img{
+      width: 100%;
+      height: 100%;
+      border: 2px solid deeppink;
+    }
+
+    footer{
+        width: 100%;
+        height: 30px;
+        background-color: black;
+        text-align: center;
+    }
+
+    footer li{
+        display: inline-block;
+        text-align: center;
+        font-size: 20px;
+        color: white;
+        margin: 5px;
+    }
+
+    footer img{
+        width: 20px;
+        height: 20px;
+    }
+    
+    @media screen and (min-width: 270px) and (max-width: 540px){
+      nav{
+        height: 30px;
+      } 
+        
+      nav li{
+        font-size: 13px;
+        margin: 5px;
+      }
+
+      nav a:hover{
+        font-size: 20px;
+      }
+
+      nav b{
+        display: none;
+      }
+
+      .dropdown{
+        width: 250px;
+      }
+
+      .dropdown li a{
+       font-size: 15px;
+      }
+        
+      .scroll{
+        height: 30px;
+      }
+        
+      .scroll img{
+        width: 30px;
+        height: 30px;
+      }
+        
+      h1{
+        font-size: 22px;
+      }
+        
+      p{
+        font-size: 25px;
+      }
+
+      .sub-main{
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    @media screen and (min-width: 541px) and (max-width: 950px) {
+      nav{
+        text-align: center;
+      }
+
+      nav b{
+        display: none;
+      }
+
+      nav a{
+        font-size: 20px;
+      }
+      
+      nav a:hover{
+        font-size: 20px;
+      }
+
+      .sub-main{
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body> 
+  <nav>
+    <ul>
+      <b> ADJOSEC INVESTMENT LIMITED </b>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li> <a href="index.html"> Home </a></li>
+      <li>
+        <a href=""> Departments </a>
+        <ul class="dropdown">
+          <li> <a href="supermarket.html"> Supermarket / Retail </a></li>
+          <li> <a href="bar.html"> Bar / Restaurant </a></li>
+          <li> <a href="wholesale.html"> Cash & Carry / Wholesale </a></li>
+          <li> <a href="TripleXhotel.html"> Triple X Hotel </a></li>
+          <li> <a href="adjosechotel.html"> Adjosec Hotel </a></li>
+        </ul>
+      </li>
+      <li> <a href="Contact.html" style="color: red;"> Contact </a></li>
+      <li> <a href="Director.html"> History </a></li>
+      <li> <a href="help.html"> Help </a></li>
+    </ul>
+  </nav>
+  <div class="scroll">
+    <marquee behavior="alternate"> 
+      <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png">
+      <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png">
+      <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png"> 
+      <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png">
+      <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png">
+      <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png">
+    </marquee>
+  </div>
+  <br><br>
+  <div class="main">
+    <div class="sub-main">
+        <p>
+        For <i> General Information, </i> contact: <br> <b> <a href=""> 0597 - 413 - 427 </a> </b>
+        </p>
+    </div>
+    
+    <div class="sub-main">
+        <p>
+            For enquiries or information at the <i> Supermarket, </i> contact: <br> <b> <a href=""> 0597 - 413 - 618 </a> </b>
+        </p>
+    </div>
+    <div class="sub-main">
+        <p>
+            For enquiries or information at the <i> Bar/Restaurant, </i> contact: <br> <b> <a href=""> 0507 - 086 - 432 </a> </b>
+        </p>
+    </div>
+    <div class="sub-main">
+        <p>
+            For enquiries or information at the <i> Cash & Carry/Wholesale, </i> contact: <br> <b> <a href=""> 0202 - 168 - 170 </a> </b>
+        </p>
+    </div>
+    <div class="sub-main">
+        <p>
+            For enquiries or information at the <i> Triple X Hotel, </i> contact: <br> <b> <a href=""> 0509 - 557 - 309 </a> </b>
+        </p>
+    </div>
+    <div class="sub-main">
+        <p>
+            For enquiries or information at the <i> ADJOSEC Hotel, </i> contact: <br> <b> <a href=""> 0264 - 262 - 543 </a> </b>
+        </p>
+    </div>
+  </div>
+
+  <footer>
+    <ul>
+        <ul>
+            <marquee behavior="" direction="">
+                <li> <img src="AIL.png" alt=""></li>
+                <li> <img src="AIL.png" alt=""></li>
+                <li> <i> &copy 2000 - 2026 alright reserved </i> </li>
+                <li> <img src="AIL.png" alt=""></li>
+                <li> <img src="AIL.png" alt=""></li>
+                <li> <i> ADJOSEC INVESTMENT LIMITED </i></li>
+                <li> <img src="AIL.png" alt=""></li>
+                <li> <img src="AIL.png" alt=""></li>
+            </marquee>
+        </ul>
+    </ul>
+  </footer>
+</body>
+</html>

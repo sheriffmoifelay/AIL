@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title> X - Mart Supermarket </title>
+  <link rel="shortcut icon" href="AIL.png" type="image/x-icon">
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  
+    nav{
+      width: 100%;
+      height: 40px;
+      background-color: purple; 
+      text-align: center    
+    }
+
+    nav b{
+      font-size: 150%;
+      color: rgb(9, 232, 9);
+      transition: 1s;
+    }
+
+    nav b:hover{
+      font-size: 155%;
+    }
+    
+    nav li{
+      display: inline-block;
+      margin: 10px;
+      font-size: 20px;
+      text-align: right;
+    }
+    
+    nav a{
+      text-decoration: none;
+      color: white;
+      transition: 1s;
+    }
+
+    nav a:hover{
+      color: blue;
+      font-size: 22px;
+    }
+    
+    .dropdown{
+      width: 350px;
+      display: none;
+      position: absolute;
+      z-index: 999;
+      background-color: darkslategrey;
+    }
+
+    .dropdown li{
+      display: block;
+      text-align: center;
+    }
+
+    .dropdown a{
+      font-size: 25px;
+      color: yellow;
+      transition: 1s;
+    }
+
+    .dropdown a:hover{
+      color: deeppink;
+    }
+
+    ul li:hover .dropdown{
+      display: block;
+    }
+    
+    .scroll{
+      width: 100%;
+      background-color: blue;
+    }
+    
+    .scroll img{
+      width: 80px;
+      height: 80px;
+    }
+    
+    h1{
+      text-align: center;
+      color: blue;
+    }
+
+    h2{
+      text-align: center;
+      color: blue;
+    }
+    
+    p{
+      margin-left: 10px;
+      font-size: 30px;
+    }
+
+    .main{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .sub-main{
+      width: 18%;
+      height: 200px;
+      margin: 5px;
+    }
+
+    .sub-main img{
+      width: 100%;
+      height: 100%;
+      border: 2px solid deeppink;
+    }
+
+    footer{
+        width: 100%;
+        height: 30px;
+        background-color: black;
+        text-align: center;
+    }
+
+    footer li{
+        display: inline-block;
+        text-align: center;
+        font-size: 20px;
+        color: white;
+        margin: 5px;
+    }
+
+    footer img{
+        width: 20px;
+        height: 20px;
+    }
+    
+    @media screen and (min-width: 270px) and (max-width: 540px){
+      nav{
+        height: 30px;
+      } 
+        
+      nav li{
+        font-size: 13px;
+        margin: 5px;
+      }
+
+      nav a:hover{
+        font-size: 20px;
+      }
+
+      nav b{
+        display: none;
+      }
+
+      .dropdown{
+        width: 250px;
+      }
+
+      .dropdown li a{
+       font-size: 15px;
+      }
+        
+      .scroll{
+        height: 30px;
+      }
+        
+      .scroll img{
+        width: 30px;
+        height: 30px;
+      }
+        
+      h1{
+        font-size: 22px;
+      }
+        
+      p{
+        font-size: 25px;
+      }
+
+      .sub-main{
+        width: 30%;
+        height: 100px;
+      }
+    }
+
+    @media screen and (min-width: 541px) and (max-width: 950px) {
+      nav{
+        text-align: center;
+      }
+
+      nav b{
+        display: none;
+      }
+
+      nav a{
+        font-size: 20px;
+      }
+      
+      nav a:hover{
+        font-size: 20px;
+      }
+
+      .sub-main{
+        width: 20%;
+        height: 120px;
+      }
+    }
+  </style>
+</head>
+<body> 
+  <nav>
+    <ul>
+      <b> ADJOSEC INVESTMENT LIMITED </b>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li> <a href="index.html"> Home </a></li>
+      <li>
+        <a href=""> Departments </a>
+        <ul class="dropdown">
+          <li> <a href="supermarket.html" style="color: red;"> Supermarket / Retail </a></li>
+          <li> <a href="bar.html"> Bar / Restaurant </a></li>
+          <li> <a href="wholesale.html"> Cash & Carry / Wholesale </a></li>
+          <li> <a href="TripleXhotel.html"> Triple X Hotel </a></li>
+          <li> <a href="adjosechotel.html"> Adjosec Hotel </a></li>
+        </ul>
+      </li>
+      <li> <a href="Contact.html"> Contact </a></li>
+      <li> <a href="Director.html"> History </a></li>
+      <li> <a href="help.html"> Help </a></li>
+    </ul>
+  </nav>
+  <div class="scroll">
+    <marquee behavior="alternate"> 
+      <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png">
+      <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png">
+      <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png"> 
+      <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png">
+      <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png">
+      <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png">
+    </marquee>
+  </div>
+  <img src="XMart Bckg.png" alt="" style="width: 100%;">
+  <h1> X - MART SUPERMARKET </h1>
+  <p>
+    <b> X - Mart </b> is the first supermarket in Buduburam. It was first located opposite Liberia Camp, adjacent Former Ecobank Building
+    along with which were demolished due to the road construction which started in 2024. It has been a source of employment for many youths
+    in its environment including foreign nationals hence its employment is not limited to only Ghannaian nationals. <br>
+    <b> X - Mart </b> has been an entry level for so many job seekers and has empowered many people to do business of their own after their
+    stay. <br><br>
+    It has been a long time customer to distribution companies in the region like FanMilk, Detella, Naatoa, Kofi Gyimah, and E.O.B. It was relocated 
+    to Triple X early 2024 ahead of the commencement of road construction.
+  </p>
+  <br><br>
+  <h2> GALLERY </h2>
+  <div class="main">
+    <div class="sub-main"><img src="background.jpg" alt=""></div>
+    <div class="sub-main"><img src="background.jpg" alt=""></div>
+    <div class="sub-main"><img src="background.jpg" alt=""></div>
+    <div class="sub-main"><img src="background.jpg" alt=""></div>
+    <div class="sub-main"><img src="background.jpg" alt=""></div>
+    <div class="sub-main"><img src="background.jpg" alt=""></div>
+    <div class="sub-main"><img src="background.jpg" alt=""></div>
+    <div class="sub-main"><img src="background.jpg" alt=""></div>
+    <div class="sub-main"><img src="background.jpg" alt=""></div>
+    <div class="sub-main"><img src="background.jpg" alt=""></div>
+    <div class="sub-main"><img src="background.jpg" alt=""></div>
+    <div class="sub-main"><img src="background.jpg" alt=""></div>
+    <div class="sub-main"><img src="background.jpg" alt=""></div>
+    <div class="sub-main"><img src="background.jpg" alt=""></div>
+    <div class="sub-main"><img src="background.jpg" alt=""></div>
+    <div class="sub-main"><img src="background.jpg" alt=""></div>
+    <div class="sub-main"><img src="background.jpg" alt=""></div>
+    <div class="sub-main"><img src="background.jpg" alt=""></div>
+    <div class="sub-main"><img src="background.jpg" alt=""></div>
+    <div class="sub-main"><img src="background.jpg" alt=""></div>
+  </div>
+
+  
+  <footer>
+    <ul>
+        <ul>
+            <marquee behavior="" direction="">
+                <li> <img src="AIL.png" alt=""></li>
+                <li> <img src="AIL.png" alt=""></li>
+                <li> <i> &copy 2000 - 2026 alright reserved </i> </li>
+                <li> <img src="AIL.png" alt=""></li>
+                <li> <img src="AIL.png" alt=""></li>
+            </marquee>
+        </ul>
+    </ul>
+  </footer>
+</body>
+</html>

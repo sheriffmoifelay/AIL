@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title> Triple X - Hotel </title>
+  <link rel="shortcut icon" href="AIL.png" type="image/x-icon">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  
+    nav{
+      width: 100%;
+      height: 40px;
+      background-color: purple; 
+      text-align: center    
+    }
+
+    nav b{
+      font-size: 150%;
+      color: rgb(9, 232, 9);
+      transition: 1s;
+    }
+
+    nav b:hover{
+      font-size: 155%;
+    }
+    
+    nav li{
+      display: inline-block;
+      margin: 10px;
+      font-size: 20px;
+      text-align: right;
+    }
+    
+    nav a{
+      text-decoration: none;
+      color: white;
+      transition: 1s;
+    }
+
+    nav a:hover{
+      color: blue;
+      font-size: 22px;
+    }
+    
+    .dropdown{
+      width: 350px;
+      display: none;
+      position: absolute;
+      z-index: 999;
+      background-color: darkslategrey;
+    }
+
+    .dropdown li{
+      display: block;
+      text-align: center;
+    }
+
+    .dropdown a{
+      font-size: 25px;
+      color: yellow;
+      transition: 1s;
+    }
+
+    .dropdown a:hover{
+      color: deeppink;
+    }
+
+    ul li:hover .dropdown{
+      display: block;
+    }
+    
+    .scroll{
+      width: 100%;
+      background-color: blue;
+    }
+    
+    .scroll img{
+      width: 80px;
+      height: 80px;
+    }
+    
+    h1{
+      text-align: center;
+      color: blue;
+    }
+    
+    p{
+      margin-left: 10px;
+      font-size: 30px;
+    }
+
+    .rooms{
+      display: flex; 
+      flex-wrap: wrap; 
+      justify-content: center;
+    }
+
+    .sub-rooms{
+      font-size: 50px;
+      margin: 5px;
+      transition: 1s;
+    }
+
+    .sub-rooms:hover{
+      transform: scale(1.1);
+    }
+
+    .sub-rooms a{
+      font-size: 20px;
+      transition: 1s;
+    }
+
+    .sub-rooms a:hover{
+      color: deeppink;
+    }
+
+    .row img{
+      width: 550px;
+    }
+
+    .row b{
+      font-size: 20px;
+      text-align: center;
+    }
+
+    .room-contents{
+      display: flex;
+      flex-wrap: wrap;
+      width: 500px;
+    }
+
+    .room-contents div{
+      width: 250px;
+    }
+
+    .room-contents div li{
+      font-size: 20px;
+      margin: 10px;
+    }
+
+    .main{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .sub-main{
+      width: 30%;
+      height: 200px;
+      margin: 5px;
+    }
+
+    .sub-main img{
+      width: 100%;
+      height: 100%;
+      border: 2px solid deeppink;
+    }
+
+    footer{
+        width: 100%;
+        height: 30px;
+        background-color: black;
+        text-align: center;
+    }
+
+    footer li{
+        display: inline-block;
+        text-align: center;
+        font-size: 20px;
+        color: white;
+        margin: 5px;
+    }
+
+    footer img{
+        width: 20px;
+        height: 20px;
+    }
+    
+    @media screen and (min-width: 270px) and (max-width: 540px){
+      nav{
+        height: 30px;
+      } 
+        
+      nav li{
+        font-size: 15px;
+        margin: 5px;
+      }
+
+      nav a:hover{
+        font-size: 20px;
+      }
+
+      nav b{
+        display: none;
+      }
+      
+      #nothing{
+        display: none;
+      }
+
+      .dropdown{
+        width: 250px;
+      }
+
+      .dropdown li a{
+        font-size: 15px;
+      }
+        
+      .scroll{
+        height: 30px;
+      }
+        
+      .scroll img{
+        width: 30px;
+        height: 30px;
+      }
+        
+      h1{
+        font-size: 22px;
+      }
+        
+      p{
+        font-size: 25px;
+      }
+  
+      .sub-rooms{
+        font-size: 20px;
+      }
+
+      .row img{
+        width: 320px;
+      }
+
+      .row b{
+        font-size: 17px;
+      }
+
+      .room-contents{
+        width: 320px;
+      }
+
+      .room-contents div{
+        width: 160px;
+      }
+          
+      .room-contents ul{
+          margin-left: -25px;
+      }
+
+      .room-contents div li{
+        font-size: 15px;
+      }
+
+      .sub-main{
+        width: 30%;
+        height: 100px;
+      }
+    }
+
+    @media screen and (min-width: 541px) and (max-width: 950px) {
+      nav{
+        text-align: center;
+      }
+
+      nav b{
+        display: none;
+      }
+      
+      #nothing{
+        display: none;
+      }
+
+      nav a{
+        font-size: 20px;
+      }
+      
+      nav a:hover{
+        font-size: 20px;
+      }
+
+      .sub-rooms{
+        font-size: 25px;
+      }
+
+      .row img{
+        width: 100%;
+      }
+
+      .row b{
+        font-size: 17px;
+      }
+
+      .room-contents{
+        width: 100%;
+      }
+
+      .room-contents div{
+        width: 100%;
+      }
+          
+      .room-contents ul{
+          margin-left: -25px;
+      }
+
+      .room-contents div li{
+        font-size: 15px;
+      }
+
+      .sub-main{
+        width: 20%;
+        height: 100px;
+      }
+    }
+  </style>
+</head>
+<body> 
+  <nav>
+    <ul>
+      <b> ADJOSEC INVESTMENT LIMITED </b>
+      <li id="nothing"></li>
+      <li id="nothing"></li>
+      <li> <a href="index.html"> Home </a></li>
+      <li>
+        <a href=""> Departments </a>
+        <ul class="dropdown">
+          <li> <a href="supermarket.html"> Supermarket / Retail </a></li>
+          <li> <a href="bar.html"> Bar / Restaurant </a></li>
+          <li> <a href="wholesale.html"> Cash & Carry / Wholesale </a></li>
+          <li> <a href="TripleXhotel.html" style="color: red;"> Triple X Hotel </a></li>
+          <li> <a href="adjosechotel.html"> Adjosec Hotel </a></li>
+        </ul>
+      </li>
+      <li> <a href="Contact.html"> Contact </a></li>
+      <li> <a href="Director.html"> History </a></li>
+      <li> <a href="help.html"> Help </a></li>
+    </ul>
+  </nav>
+  <div class="scroll">
+    <marquee behavior="alternate"> 
+      <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png">
+      <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png">
+      <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png"> 
+      <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png">
+      <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png">
+      <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png">
+    </marquee>
+  </div>
+  <img src="XXX Reception.jpg" style="width: 100%;">
+  <h1 data-aos="zoom-in"> <b> TRIPLE X - HOTEL </b> </h1>
+  <p data-aos="zoom-out">
+    <b> Triple X - Hotel </b> is the Operating Hospitality Building Branch of ADJOSEC INVESTMENT LIMITED. 
+  </p>
+  <h1 data-aos="zoom-in"> <b> AVAILABLE ROOMS: </b> </h1>
+  <div class="rooms" data-aos="zoom-out">
+      <div class="sub-rooms"> 
+        <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1"> <b> QUEEN-SIZED ROOMS </b> </a>
+      </div>
+      <div class="sub-rooms"> 
+        <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample2" role="button" aria-expanded="false" aria-controls="multiCollapseExample2"> <b> SUPERIOR ROOMS </b> </a>
+      </div>
+      <div class="sub-rooms"> 
+        <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample3" role="button" aria-expanded="false" aria-controls="multiCollapseExample3"> <b> FAMILY ROOMS </b> </a>
+      </div>
+      <div class="sub-rooms"> 
+        <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample4" role="button" aria-expanded="false" aria-controls="multiCollapseExample4"> <b> COUPLE ROOMS </b> </a>
+      </div>
+      <div class="sub-rooms"> 
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample5" aria-expanded="false" aria-controls="multiCollapseExample5"> <b> STANDARD ROOMS </b> </button>
+      </div>
+      <div class="sub-rooms"> 
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2 multiCollapseExample3 multiCollapseExample4 multiCollapseExample5" style="margin: 5px;"> <b> ROOMS OVERVIEW </b> </button>
+      </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <div class="collapse multi-collapse" id="multiCollapseExample1">
+        <div class="card card-body">
+          <img src="Queensize.jpg">
+          <b> Available in the Queen-Sized Room: </b>
+          <div class="room-contents">
+            <div>
+                <ul>
+                  <li> Queen-sized Bed </li>
+                  <li> Room Service </li>
+                  <li> 5" Television </li>
+                  <li> Telephone </li>
+                  <li> Mini-Bar </li>
+                  <li> Bathtub(Shower) </li>
+                  <li> Afterbath Cares </li>
+                  <li> No - Smoking !!! </li>
+                  <li> Ironing Service </li>
+                  <li> Erand Service </li>
+                </ul>
+            </div>
+            <div>
+              <ul>
+                  <li> Bathrobe </li>
+                  <li> Laundry </li>
+                  <li> Hairdryer </li>
+                  <li> Wireless Internet </li>
+                  <li> Breakfast </li>
+                  <li> Air Conditioner </li>
+                  <li> Hot Water </li>
+                  <li> Mini-Fridge </li>
+                  <li> Wifi (Internet)</li>
+                  <li> Meal </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="collapse multi-collapse" id="multiCollapseExample2">
+        <div class="card card-body">
+          <img src="XXX Room 1.jpg">
+          <b> Available in the Superior Room: </b>
+          <div class="room-contents">
+
+            <div>
+                <ul>
+                  <li> Master Bed </li>
+                  <li> Room Service </li>
+                  <li> Hairdryer </li>
+                  <li> Telephone </li>
+                  <li> Mini-Bar </li>
+            
+                  <li> Television </li>
+                  <li> No - Smoking !!! </li>
+                  <li> Ironing Service </li>
+            </div>
+            <div> 
+                  <li> Shower (Bathtub) </li>
+                  <li> Air Conditioner </li>
+                  <li> Laundry Service </li>
+                  <li> Double Bed </li>
+                  <li> 1GB in 24hr Internet </li>
+                  <li> Hot Water </li>
+                  <li> DSTV Provided </li>
+                  <li> Breakfast (Tea) </li>
+                </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="collapse multi-collapse" id="multiCollapseExample3">
+      <div class="card card-body">
+          <img src="Familybed.jpg">
+          <b> Available in the Family Room: </b>
+          <div class="room-contents">
+            <div>
+                <ul>
+                  <li> Master Bed </li>
+                  <li> Children-Bed  </li>
+                  <li> Room Service </li>
+                  <li> Telephone </li>
+                  <li> Two Hanging Fans </li>
+
+                  <li> Two Bathrooms </li>
+                  <li> Television </li>
+                  <li> No - Smoking!! </li>
+                  <li> Laundry (with T&C) </li>
+                  <li> (1G/24hr) Internet </li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                  <li> Bathrobe </li>
+                  <li> Laundry Service </li>
+                  <li> Double Bed </li> 
+                  <li> Personal Laundry </li>
+                  <li> Double Bed </li>
+                  <li> Air Conditioner</li>
+                  <li> Hot Water </li>
+                  <li> Wireless Internet </li>
+                  <li> Breakfast (Tea) </li>
+                </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="collapse multi-collapse" id="multiCollapseExample4">
+        <div class="card card-body">
+          <img src="Couplebed.jpg">
+          <b> Available in the Couples Room: </b>
+          <div class="room-contents">
+            <div>
+                <ul>
+                  <li> Queen-sized Bed </li>
+                  <li> Room Service </li>
+                  <li> Hairdryer </li>
+                  <li> Telephone </li>
+                  <li> Mini-Bar </li>
+                  <li> Bathtub </li>
+                  <li> Television </li>
+                  <li> No - Smoking !!! </li>
+                  <li> Ironing Service </li>
+                  <li> Shower(Bathtub) </li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                  <li> Bathrobe </li>
+                  <li> Laundry Service </li>
+                  <li> Single Bed </li>
+                  <li> Wireless Internet </li>
+                  <li> Laundry </li>
+                  <li> Air Conditioned </li>
+                  <li> DSTV Provided </li>
+                  <li> Double Bed </li>
+                  <li> Wifi </li>
+                  <li> Breakfast (Tea) </li>
+                </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="collapse multi-collapse" id="multiCollapseExample5">
+        <div class="card card-body">
+          <img src="Singlebed.jpg">
+          <b> Available in the Standard Room: </b>
+          <div class="room-contents">
+            <div>
+                <ul>
+                  <li> Single Bed </li>
+                  <li> Television </li>
+                  <li> Telephone </li>
+                  <li> No Room Service </li>
+                  <li> No Hairdryer </li>
+
+                  <li> No Mini-Bar </li>
+                  <li> No Bathtub </li>
+
+                  <li> No - Smoking !!! </li>
+                  <li> No Iron/Ironing</li>
+                  <li> No Afterbath Care </li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                  <li> Hanging Fan </li>
+                  <li> No Bathrobe </li>
+                  <li> No Laundry Service </li>
+                  <li> No Double Bed </li>
+                  <li> No Internet </li>
+                  <li> No Hot Water </li>
+                  <li> No Air Conditioned </li>
+                  <li> No Errand Service </li>
+                  <li> No Wifi </li>
+                  <li> No Breakfast </li>
+                </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <h1 data-aos="zoom-in"> <b> GALLERY </b> </h1>
+  <div class="main" data-aos="zoom-out">
+    <div class="sub-main"><img src="XXX Hall 1.jpg" alt=""></div>
+    <div class="sub-main"><img src="Queensize.jpg" alt=""></div>
+    <div class="sub-main"><img src="Couplebed.jpg" alt=""></div>
+    <div class="sub-main"><img src="Singlebed.jpg" alt=""></div>
+    <div class="sub-main"><img src="Familybed.jpg" alt=""></div>
+    <div class="sub-main"><img src="XXX Hall 1.jpg" alt=""></div>
+    <div class="sub-main"><img src="Couplebed.jpg" alt=""></div>
+    <div class="sub-main"><img src="Familybed.jpg" alt=""></div>
+    <div class="sub-main"><img src="Queensize.jpg" alt=""></div>
+    <div class="sub-main"><img src="XXX Reception.jpg" alt=""></div>
+    <div class="sub-main"><img src="XXX Hall 1.jpg" alt=""></div>
+    <div class="sub-main"><img src="Singlebed.jpg" alt=""></div>
+    <div class="sub-main"><img src="XXX Room 1.jpg" alt=""></div>
+    <div class="sub-main"><img src="XXX Hall 1.jpg" alt=""></div>
+    <div class="sub-main"><img src="XXX Room 1.jpg" alt=""></div>
+    <div class="sub-main"><img src="Familybed.jpg" alt=""></div>
+    <div class="sub-main"><img src="XXX Reception.jpg" alt=""></div>
+    <div class="sub-main"><img src="XXX Room 1.jpg" alt=""></div>
+    <div class="sub-main"><img src="Queensize.jpg" alt=""></div>
+    <div class="sub-main"><img src="Couplebed.jpg" alt=""></div>
+    <div class="sub-main"><img src="Singlebed.jpg" alt=""></div>
+  </div>
+
+
+
+
+  <footer>
+    <ul>
+        <ul>
+            <marquee behavior="" direction="">
+                <li> <img src="AIL.png" alt=""></li>
+                <li> <img src="AIL.png" alt=""></li>
+                <li> <i> &copy 2000 - 2026 alright reserved </i> </li>
+                <li> <img src="AIL.png" alt=""></li>
+                <li> <img src="AIL.png" alt=""></li>
+            </marquee>
+        </ul>
+    </ul>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

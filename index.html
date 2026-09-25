@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title> ADJOSEC INVESTMENT LIMITED </title>
+  <link rel="shortcut icon" href="AIL.png" type="image/x-icon">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  
+    nav{
+      width: 100%;
+      height: 40px;
+      background-color: purple; 
+      text-align: center    
+    }
+
+    nav b{
+      font-size: 150%;
+      color: rgb(9, 232, 9);
+      transition: 1s;
+    }
+
+    nav b:hover{
+      font-size: 155%;
+    }
+    
+    nav li{
+      display: inline-block;
+      margin: 10px;
+      font-size: 20px;
+      text-align: right;
+    }
+    
+    nav a{
+      text-decoration: none;
+      color: white;
+      transition: 1s;
+    }
+
+    nav a:hover{
+      color: blue;
+      font-size: 22px;
+    }
+    
+    .dropdown{
+      width: 350px;
+      display: none;
+      position: absolute;
+      z-index: 999;
+      background-color: darkslategrey;
+    }
+
+    .dropdown li{
+      display: block;
+      text-align: center;
+    }
+
+    .dropdown a{
+      font-size: 25px;
+      color: yellow;
+      transition: 1s;
+    }
+
+    .dropdown a:hover{
+      color: deeppink;
+    }
+
+    ul li:hover .dropdown{
+      display: block;
+    }
+    
+    .scroll{
+      width: 100%;
+      background-color: blue;
+    }
+    
+    .scroll img{
+      width: 80px;
+      height: 80px;
+    }
+    
+    h1{
+      text-align: center;
+      color: blue;
+    }
+    
+    p{
+      margin-left: 10px;
+      font-size: 30px;
+    }
+
+    .main{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .sub-main{
+      width: 48%;
+      height: 100%;
+      border: 2px solid rgb(171, 167, 167);
+      margin: 5px;
+    }
+
+    .sub-main img{
+      width: 100%;
+      height: 100%;
+    }
+
+    #contact{
+      text-align: center;
+    }
+
+    #contact p{
+      font-size: 20px;
+    }
+
+    #contact b{
+      color: palevioletred;
+    }
+
+    #contact i{
+      color: red;
+    }
+
+    #partners h2{
+      text-align: center;
+    }
+
+    #partners li{
+      display: block;
+      font-size: 22px;
+      text-align: center;
+    }
+
+    #partners a{
+      text-decoration: none;
+      color: deepskyblue;
+    }
+
+    .follow{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .follow a{
+      text-decoration: none;
+      color: none;
+      margin: 10px;
+    }
+
+    .follow img{
+      width: 50px;
+      height: 50px;
+    }
+
+    footer{
+        width: 100%;
+        height: 30px;
+        background-color: black;
+        text-align: center;
+    }
+
+    footer li{
+        display: inline-block;
+        text-align: center;
+        font-size: 20px;
+        color: white;
+        margin: 5px;
+    }
+
+    footer img{
+        width: 20px;
+        height: 20px;
+    }
+    
+    @media screen and (min-width: 270px) and (max-width: 540px){
+      nav{
+        height: 30px;
+      } 
+        
+      nav li{
+        font-size: 13px;
+        margin: 5px;
+      }
+
+      nav a:hover{
+        font-size: 20px;
+      }
+
+      nav b{
+        display: none;
+      }
+
+      .dropdown{
+        width: 250px;
+      }
+
+      .dropdown li a{
+       font-size: 15px;
+      }
+        
+      .scroll{
+        height: 30px;
+      }
+        
+      .scroll img{
+        width: 30px;
+        height: 30px;
+      }
+        
+      h1{
+        font-size: 22px;
+      }
+        
+      p{
+        font-size: 25px;
+      }
+
+      .sub-main{
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    @media screen and (min-width: 541px) and (max-width: 950px) {
+      nav{
+        text-align: center;
+      }
+
+      nav b{
+        display: none;
+      }
+
+      nav a{
+        font-size: 20px;
+      }
+      
+      nav a:hover{
+        font-size: 20px;
+      }
+
+      .sub-main{
+        width: 45%;
+      }
+
+      .sub-main img{
+        margin-top: 50%;
+      }
+    }
+  </style>
+</head>
+<body> 
+  <nav>
+    <ul>
+      <b> ADJOSEC INVESTMENT LIMITED </b>
+      <li></li>
+      <li></li>
+      <li> <a href="index.html" style="color: red;"> Home </a></li>
+      <li>
+        <a href="#"> Departments </a>
+        <ul class="dropdown">
+          <li> <a href="supermarket.html"> Supermarket / Retail </a></li>
+          <li> <a href="bar.html"> Bar / Restaurant </a></li>
+          <li> <a href="wholesale.html"> Cash & Carry / Wholesale </a></li>
+          <li> <a href="TripleXhotel.html"> Triple X Hotel </a></li>
+          <li> <a href="adjosechotel.html"> Adjosec Hotel </a></li>
+        </ul>
+      </li>
+      <li> <a href="Contact.html"> Contact </a></li>
+      <li> <a href="Director.html"> History </a></li>
+      <li> <a href="help.html"> Help </a></li>
+    </ul>
+  </nav>
+  <div class="scroll">
+    <marquee behavior="alternate"> 
+      <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png">
+      <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png">
+      <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png"> 
+      <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png">
+      <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png">
+      <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png">
+    </marquee>
+  </div>
+  <img src="XXX Reception.jpg" style="width: 100%;">
+  <br><br>
+  <h1 id="home" data-aos="zoom-in"> <b> ADJOSEC INVESTMENT LIMITED </b> </h1>
+  <p data-aos="zoom-out-left">
+    <b title="AIL"> Adjosec Investmwnt Limited </b> is a company in Buduburam mostly known as Triple X also written as XXX. <br>
+    Triple X since early 21st century has been the first and best entertainment center in Buduburam Liberia Camp, 
+    entertaining both Ghannains, the Refugees from Liberia, and many other foreign nationals from the neighboring 
+    countries including Sierra Leone, Togo, Benin and Nigeria. <br> It is one of the modern developed infrastructures in the region. 
+    It helps most youths around its surrounding providing employment opportunities for as low as 16 years. With its various departments,
+    employees find suitable positions under so many circumstances such as age, address, gender and nationalities. At Triple X, employment
+    is strictly based on personal credentials of individual; what a person bring on board to help grow the company. <br><br>
+    Visit the various departments to explore its products and services. Recruitment is always ongoing as the company served to train and help
+    more youths off the street and struggling travellers finding means to settle or continue; but only if the serious ones. For more informations
+    of the available vacancies, visit <a href="job.html" style="text-decoration: none;"> xxxjobs@buduburam </a> to view and follow the process to apply.
+    <br>
+  </p>
+  <div class="main">
+    <div class="sub-main" data-aos="zoom-in-left"> <img src="Loading Boys.jpg" alt=""></div>
+    <div class="sub-main" data-aos="zoom-in-right">
+      <p>
+        The <b> Wholesale </b> / the Depot of the Company, plays a crucial role in the everyday affairs receiving most of the goods in large quantities that the company sells. 
+        Its an annex where products of different companies are received, sorted and filtered before distributing to other departments of the company. Though it is a new branch, 
+        it has been one of the most important branch of the company.
+      </p>
+    </div>
+  </div>
+  <div class="main">
+    <div class="sub-main" data-aos="zoom-in-left">
+     <p>
+        The <b> Supermarket </b> / the retailling of the company, is the best in the region now; a mini-mall providing almost everything for shopping. <br> 
+        Commonly known as X-Mart, its the most visited shopping center in Buduburam since its creation. It was relocated from the Liberia Camp where its initial 
+        building was demolished by the road construction projects which marked the building victim. 
+      </p> 
+    </div>
+    <div class="sub-main" data-aos="zoom-in-right">
+      <img src="XMart Bckg.png" alt=""> <br><br>
+      <img src="background.jpg" alt="">  
+    </div>
+  </div>
+  <div class="main">
+    <div class="sub-main" data-aos="zoom-in-left"> 
+      <img src="Queensize.jpg" alt=""> <br>
+      <img src="Couplebed.jpg" alt=""> <br>
+    </div>
+    <div class="sub-main" data-aos="zoom-in-right">
+      <p>
+        <b> Triple X Hotel </b> which carries the company's most recognized name, is one of the two hotel departments of the company. With well furnished rooms, it is the most recommended
+        hotel many travellers choose to stay for better relaxation and comfortable lodging. It is located by the main road - Accra to Cape Coast Road which makes its accessibility more conducive 
+        to customers. With an inside Bar and Restaurant delivering both local and continental dishes, people feel at home while lodged. And customer service is the top priority of every
+        staff allowing frequent and more visits. 
+      </p>
+    </div>
+  </div>
+  <br><br>
+  <div class="main">
+      <div class="sub-main" id="contact">
+      <p>
+        <b> <u> Address: </u> </b> <br>
+        Along Accra - Winneba Highway <br>
+        Opposite <a href="https://onuafrancisinternationalschool.com/" style="text-decoration: none;"> Onua Francis International School </a> <br>
+        Buduburam - Gomoa East <br>
+        Central Ghana <br>
+        <b> <u> Phone: </u> </b> <br>
+        0597 413 427 / 0202 168 170 <br>
+        <b> <u> Email: </u> </b> <br>
+        adjosecwholesale@gmail.com <br>
+        <b> <u> Working Hours: </u> </b> <br>
+        Our Working hours differ according to departments. <br>
+        <i> @ Supermarket/X-Mart: </i> <br> Monday - Sunday 7:00am to 10:00pm <br>
+        <i> @ Bar/Restaurant: </i> <br> Monday - Sunday 7:00am to 8:00pm <br>
+        <i> @ Wholesale/Cash&Carry: </i> <br> Monday - Saturday 7:00am to 6:00pm <br>
+        <i> @ the Two Hotels: </i> <br> Monday - Sunday 24/7
+      </p>
+    </div>
+    <div class="sub-main" id="partners">
+      <h2> Our Trusted Partners </h2>
+      <ul>
+        <li> <a href="https://marinamallgh.com/"> Marina Mall </a></li>
+        <li> <a href="https://www.caveandgardens.net/"> Cave & Gardens </a></li>
+        <li> <a href="https://radicokhaitan.com/"> Radico Khaitan Ltd. </a></li>
+        <li> <a href="https://www.guinnessghanaplc.com/"> Guinness Ghana Ltd. </a></li>
+        <li> <a href="https://accrabrewery.com.gh/our-brands/club-beer/"> Club Ghana Ltd. </a></li>
+        <li> <a href="https://www.eccbc.com/country/ghana/"> St. Valentine - Cocacola </a></li>
+        <li> <a href="https://www.keyarchitect.com/pepsi.html"> Pepsi Ghana Ltd. </a></li>
+        <li> <a href="https://www.ghanajob.com/recruiter/33101"> Detella Company Limited </a></li>
+        <li> <a href="https://3cubeglobal.com/2022/11/02/gmr-industries/"> GMR - Darling Lemon </a></li>
+        <li> <a href="https://www.multipacgh.com/brand/perla-water/?gad_source=1&gad_campaignid=24255581744&gclid=Cj0KCQjwlNPVBhCMARIsAPZ5RqjIKa76UdSC0w1z06PvZN0YkGbtAiIJw2D7chKD0X3sGUzEOAO1qP4aAp54EALw_wcB"> Multipac Limited </a></li>
+        <li> <a href="https://twellium.com/verna-mineral-water/?gad_source=1&gad_campaignid=24252381294&gclid=Cj0KCQjwlNPVBhCMARIsAPZ5RqiCF5HDwAEtMzQDFAGoPi2M7yxb3G38FXwE1r6gsbOs0RfN9U8pabgaAkzUEALw_wcB"> Twellium Foundation </a></li>
+        <li> <a href="https://kasapreko.com/"> Kasapreko Company Limited </a></li>
+        <li> <a href="#"> Drinks Avenues Limited </a></li>
+        <li> <a href="https://yandex.com/maps/-/CXQMjMOA"> Kofi Gyimah Enterprise </a></li>
+        <li> <a href="https://accra.shopdutyfree.com/en/94/brands/rothmans"> Yodh Sky (Gh) Ltd. </a></li>
+        <li> <a href="https://yandex.com/maps/-/CXQMjJkj"> Erico Enterprise </a></li>
+        <li> <a href="https://amuzu.co.jp/e/annai-gaiyou.htms"> Amuzu Manufacturing Company Ltd. </a></li>
+      </ul>
+    </div>
+  </div>
+  <img src="Partners.png" alt="" style="width: 95%; margin-left: 2.5%;">
+  <br><br>
+  <h1> Visit Our Social Media Handles: </h1> 
+  <div class="follow">
+    <a href="https://www.facebook.com/moifelaymousamamaikonfofanasheriff" title="visit our social media manager facebook page"> <img src="facebook.png" alt=""> </a>
+    <a href="https://www.instagram.com/@khalifah_i.e_successor" title="visit our social media manager instagram page"> <img src="instagram.png" alt=""></a>
+    <a href="https://www.youtube.com/@moifelaym.sheriff531" title="visit our social media manager youtube page"> <img src="youtube.png" alt=""></a>
+    <a href="https://www.twitter.com/@MoifelayMSherif" title="visit our social media manager twitter/x page"> <img src="twitter.png" alt=""></a>
+    <a href="" title="send us your orders on Whatsapp"> <img src="whatsapp.jpg" alt=""></a>
+  </div>
+
+  <footer>
+    <ul>
+        <ul>
+            <marquee behavior="" direction="">
+                <li> <img src="AIL.png" alt=""></li>
+                <li> <img src="AIL.png" alt=""></li>
+                <li> <i> &copy 2000 - 2026 alright reserved </i> </li>
+                <li> <img src="AIL.png" alt=""></li>
+                <li> <img src="AIL.png" alt=""></li>
+                <li> <i> ADJOSEC INVESTMENT LIMITED </i></li>
+                <li> <img src="AIL.png" alt=""></li>
+                <li> <img src="AIL.png" alt=""></li>
+            </marquee>
+        </ul>
+    </ul>
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+    <script>
+        AOS.init();
+    </script>
+
+    <script src="https://cdn.commoninja.com/sdk/latest/commonninja.js" defer></script>
+    <div class="commonninja_component pid-24a07d48-273a-4461-a178-a8af50d2ccbe"></div>
+</body>
+</html>
