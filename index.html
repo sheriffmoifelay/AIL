@@ -101,6 +101,7 @@
     }
 
     .main{
+      width: 100%;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -117,20 +118,29 @@
       width: 100%;
       height: 100%;
     }
-
-    #contact{
+  
+    .sub-contact{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    .sub-contact div{
       text-align: center;
+      width: 100%;
+      height: 100%;
+      
     }
 
-    #contact p{
-      font-size: 20px;
+    .sub-contact p{
+      font-size: 100%;
     }
 
-    #contact b{
+    .sub-contact b{
       color: palevioletred;
     }
 
-    #contact i{
+    .sub-contact i{
       color: red;
     }
 
@@ -147,7 +157,7 @@
     #partners a{
       text-decoration: none;
       color: deepskyblue;
-    }
+    }   
 
     .follow{
       display: flex;
@@ -168,7 +178,7 @@
 
     footer{
         width: 100%;
-        height: 30px;
+        height: 100%;
         background-color: black;
         text-align: center;
     }
@@ -186,7 +196,7 @@
         height: 20px;
     }
     
-    @media screen and (min-width: 150px) and (max-width: 1200px){
+    @media screen and (min-width: 150px) and (max-width: 1200px) {
       nav{
         height: 100%;
       } 
@@ -197,10 +207,14 @@
       }
 
       nav a:hover{
-        font-size: 150%;
+        font-size: 20px;
       }
 
       nav b{
+        display: none;
+      }
+      
+      #nothing{
         display: none;
       }
 
@@ -222,16 +236,29 @@
       }
         
       h1{
-        font-size: 150%;
+        font-size: 250%;
       }
         
       p{
         font-size: 220%;
+        margin-left: 15px;
       }
 
       .sub-main{
         width: 100%;
-        height: 100%;
+      }
+      
+      .sub-main p{
+        font-size: 250%;
+      }
+      
+      #partners li{
+        display: inline-block;
+        font-size: 200%;
+      }
+      
+      footer{
+        width: 100%;
       }
     }
 
@@ -250,15 +277,12 @@
       
       nav a:hover{
         font-size: 20px;
-      }
+      }     
+      
 
       .sub-main{
         width: 45%;
-      }
-
-      .sub-main img{
-        margin-top: 50%;
-      }
+      }  
     }
   </style>
 </head>
@@ -266,8 +290,8 @@
   <nav>
     <ul>
       <b> ADJOSEC INVESTMENT LIMITED </b>
-      <li></li>
-      <li></li>
+      <li id="nothing"></li>
+      <li id="nothing"></li>
       <li> <a href="index.html" style="color: red;"> Home </a></li>
       <li>
         <a href="#"> Departments </a>
@@ -298,16 +322,16 @@
   <br><br>
   <h1 id="home" data-aos="zoom-in"> <b> ADJOSEC INVESTMENT LIMITED </b> </h1>
   <p data-aos="zoom-out-left">
-    <b title="AIL"> Adjosec Investmwnt Limited </b> is a company in Buduburam mostly known as Triple X also written as XXX. <br>
-    Triple X since early 21st century has been the first and best entertainment center in Buduburam Liberia Camp, 
-    entertaining both Ghannains, the Refugees from Liberia, and many other foreign nationals from the neighboring 
-    countries including Sierra Leone, Togo, Benin and Nigeria. <br> It is one of the modern developed infrastructures in the region. 
-    It helps most youths around its surrounding providing employment opportunities for as low as 16 years. With its various departments,
-    employees find suitable positions under so many circumstances such as age, address, gender and nationalities. At Triple X, employment
-    is strictly based on personal credentials of individual; what a person bring on board to help grow the company. <br><br>
-    Visit the various departments to explore its products and services. Recruitment is always ongoing as the company served to train and help
-    more youths off the street and struggling travellers finding means to settle or continue; but only if the serious ones. For more informations
-    of the available vacancies, visit <a href="job.html" style="text-decoration: none;"> xxxjobs@buduburam </a> to view and follow the process to apply.
+    <b title="AIL"> Adjosec Investmwnt Limited </b> is a company in Buduburam mostly known as Triple X, also written as XXX. <br>
+    Triple X since early 21st century has been the first and best entertainment provider in Buduburam Liberia Camp, 
+    providing entertainment for Ghannains, Liberia, Nigerians and many other foreign nationals from neighboring countries such as Sierra Leone,
+    Guinea, Mali, Togo, Benin, Burkina Fasso and from other non-neighboring countries as well. <br> It is the first and oldest entertainment center in the region. 
+    It helps most youths around its surrounding providing employment opportunities for as low as 18 years. With its various departments,
+    employees find suitable positions under so many circumstances such as age, address, gender and nationalities. Employment
+    is strictly based on potential credentials of individual; what a person can bring on board to help grow the company. <br><br>
+    Visit the various departments to explore its products and services. Recruitment is always ongoing as the company serves to train and help
+    entry level outcoming secondary high school youths and struggling travellers finding means to settle or continue; but only the most serious ones benefit this opportunity. <br> Find the available vacancies at <a href="job.html" style="text-decoration: none;"> xxxjobs@buduburam </a> 
+    To apply, click on your preferred vacancy to submit your application through email, or call / WhatsApp <a href="tel:0535005109" style="text-decoration: none;"> 0535005109 </a>.
     <br>
   </p>
   <div class="main">
@@ -315,8 +339,8 @@
     <div class="sub-main" data-aos="zoom-in-right">
       <p>
         The <b> Wholesale </b> / the Depot of the Company, plays a crucial role in the everyday affairs receiving most of the goods in large quantities that the company sells. 
-        Its an annex where products of different companies are received, sorted and filtered before distributing to other departments of the company. Though it is a new branch, 
-        it has been one of the most important branch of the company.
+        Its an annex where products of different companies are received, sorted and filtered before distributing to other departments of the company. Though newly established, 
+        it has been one of the most important branches of the company.
       </p>
     </div>
   </div>
@@ -350,44 +374,51 @@
   <br><br>
   <div class="main">
       <div class="sub-main" id="contact">
-      <p>
-        <b> <u> Address: </u> </b> <br>
-        Along Accra - Winneba Highway <br>
-        Opposite <a href="https://onuafrancisinternationalschool.com/" style="text-decoration: none;"> Onua Francis International School </a> <br>
-        Buduburam - Gomoa East <br>
-        Central Ghana <br>
-        <b> <u> Phone: </u> </b> <br>
-        0597 413 427 / 0202 168 170 <br>
-        <b> <u> Email: </u> </b> <br>
-        adjosecwholesale@gmail.com <br>
-        <b> <u> Working Hours: </u> </b> <br>
-        Our Working hours differ according to departments. <br>
-        <i> @ Supermarket/X-Mart: </i> <br> Monday - Sunday 7:00am to 10:00pm <br>
-        <i> @ Bar/Restaurant: </i> <br> Monday - Sunday 7:00am to 8:00pm <br>
-        <i> @ Wholesale/Cash&Carry: </i> <br> Monday - Saturday 7:00am to 6:00pm <br>
-        <i> @ the Two Hotels: </i> <br> Monday - Sunday 24/7
-      </p>
-    </div>
+        <div class="sub-contact">
+          <div> 
+            <p> <b> <u> Address: </u> </b> <br> Along the Accra - Winneba Highway <br> Opposite <a href="https://onuafrancisinternationalschool.com/" style="text-decoration: none;"> Onua Francis International School </a> <br> Buduburam - Gomoa East <br> Central Ghana </p>
+          </div> 
+          <div>
+            <p> <b> <u> Phone: </u> </b> <br> 0597 413 427 / 0202 168 170 </p>
+          </div>
+          <div>
+            <p> 
+              <b> <u> Email: </u> </b> <br> 
+              adjosecwholesale@gmail.com 
+            </p>         
+          </div>
+          <div>
+            <p>
+              <b> <u> Working Hours: </u> </b> <br>
+              Our Working hours differ according to departments. <br>
+              <i> @ Supermarket/X-Mart: </i> <br> Monday - Sunday 7:00am to 10:00pm <br>
+              <i> @ Bar/Restaurant: </i> <br> Monday - Sunday 7:00am to 8:00pm <br>
+              <i> @ Wholesale/Cash&Carry: </i> <br> Monday - Saturday 7:00am to 6:00pm <br>
+              <i> @ the Two Hotels: </i> <br> Monday - Sunday 24/7              
+            </p>
+          </div>        
+        </div>              
+     </div>
     <div class="sub-main" id="partners">
-      <h2> Our Trusted Partners </h2>
+      <h1> Our Trusted Partners </h1>
       <ul>
-        <li> <a href="https://marinamallgh.com/"> Marina Mall </a></li>
-        <li> <a href="https://www.caveandgardens.net/"> Cave & Gardens </a></li>
-        <li> <a href="https://radicokhaitan.com/"> Radico Khaitan Ltd. </a></li>
-        <li> <a href="https://www.guinnessghanaplc.com/"> Guinness Ghana Ltd. </a></li>
-        <li> <a href="https://accrabrewery.com.gh/our-brands/club-beer/"> Club Ghana Ltd. </a></li>
-        <li> <a href="https://www.eccbc.com/country/ghana/"> St. Valentine - Cocacola </a></li>
-        <li> <a href="https://www.keyarchitect.com/pepsi.html"> Pepsi Ghana Ltd. </a></li>
-        <li> <a href="https://www.ghanajob.com/recruiter/33101"> Detella Company Limited </a></li>
-        <li> <a href="https://3cubeglobal.com/2022/11/02/gmr-industries/"> GMR - Darling Lemon </a></li>
-        <li> <a href="https://www.multipacgh.com/brand/perla-water/?gad_source=1&gad_campaignid=24255581744&gclid=Cj0KCQjwlNPVBhCMARIsAPZ5RqjIKa76UdSC0w1z06PvZN0YkGbtAiIJw2D7chKD0X3sGUzEOAO1qP4aAp54EALw_wcB"> Multipac Limited </a></li>
-        <li> <a href="https://twellium.com/verna-mineral-water/?gad_source=1&gad_campaignid=24252381294&gclid=Cj0KCQjwlNPVBhCMARIsAPZ5RqiCF5HDwAEtMzQDFAGoPi2M7yxb3G38FXwE1r6gsbOs0RfN9U8pabgaAkzUEALw_wcB"> Twellium Foundation </a></li>
-        <li> <a href="https://kasapreko.com/"> Kasapreko Company Limited </a></li>
-        <li> <a href="#"> Drinks Avenues Limited </a></li>
-        <li> <a href="https://yandex.com/maps/-/CXQMjMOA"> Kofi Gyimah Enterprise </a></li>
-        <li> <a href="https://accra.shopdutyfree.com/en/94/brands/rothmans"> Yodh Sky (Gh) Ltd. </a></li>
-        <li> <a href="https://yandex.com/maps/-/CXQMjJkj"> Erico Enterprise </a></li>
-        <li> <a href="https://amuzu.co.jp/e/annai-gaiyou.htms"> Amuzu Manufacturing Company Ltd. </a></li>
+        <li> <a href="https://marinamallgh.com/"> Marina Mall </a> | </li>
+        <li> <a href="https://www.caveandgardens.net/"> Cave & Gardens </a> | </li>
+        <li> <a href="https://radicokhaitan.com/"> Radico Khaitan Ltd. </a> | </li>
+        <li> <a href="https://www.guinnessghanaplc.com/"> Guinness Ghana Ltd. </a> | </li>
+        <li> <a href="https://accrabrewery.com.gh/our-brands/club-beer/"> Club Ghana Ltd. </a> | </li>
+        <li> <a href="https://www.eccbc.com/country/ghana/"> St. Valentine - Cocacola </a> | </li>
+        <li> <a href="https://www.keyarchitect.com/pepsi.html"> Pepsi Ghana Ltd. </a> | </li>
+        <li> <a href="https://www.ghanajob.com/recruiter/33101"> Detella Company Limited </a> | </li>
+        <li> <a href="https://3cubeglobal.com/2022/11/02/gmr-industries/"> GMR - Darling Lemon </a> | </li>
+        <li> <a href="https://www.multipacgh.com/brand/perla-water/?gad_source=1&gad_campaignid=24255581744&gclid=Cj0KCQjwlNPVBhCMARIsAPZ5RqjIKa76UdSC0w1z06PvZN0YkGbtAiIJw2D7chKD0X3sGUzEOAO1qP4aAp54EALw_wcB"> Multipac Limited </a> | </li>
+        <li> <a href="https://twellium.com/verna-mineral-water/?gad_source=1&gad_campaignid=24252381294&gclid=Cj0KCQjwlNPVBhCMARIsAPZ5RqiCF5HDwAEtMzQDFAGoPi2M7yxb3G38FXwE1r6gsbOs0RfN9U8pabgaAkzUEALw_wcB"> Twellium Foundation </a> | </li>
+        <li> <a href="https://kasapreko.com/"> Kasapreko Company Limited </a> | </li>
+        <li> <a href="#"> Drinks Avenues Limited </a> | </li>
+        <li> <a href="https://yandex.com/maps/-/CXQMjMOA"> Kofi Gyimah Enterprise </a> | </li>
+        <li> <a href="https://accra.shopdutyfree.com/en/94/brands/rothmans"> Yodh Sky (Gh) Ltd. </a> | </li>
+        <li> <a href="https://yandex.com/maps/-/CXQMjJkj"> Erico Enterprise </a> | </li>
+        <li> <a href="https://amuzu.co.jp/e/annai-gaiyou.htms"> Amuzu Manufacturing Company Ltd. </a> | </li>
       </ul>
     </div>
   </div>
@@ -395,11 +426,11 @@
   <br><br>
   <h1> Visit Our Social Media Handles: </h1> 
   <div class="follow">
-    <a href="https://www.facebook.com/moifelaymousamamaikonfofanasheriff" title="visit our social media manager facebook page"> <img src="facebook.png" alt=""> </a>
+    <a href="https://www.facebook.com/moifelaymousamamaikonfofanasheriff" title="visit our social media manager facebook page"> <img src="facebook.png" alt=""> </a> 
     <a href="https://www.instagram.com/@khalifah_i.e_successor" title="visit our social media manager instagram page"> <img src="instagram.png" alt=""></a>
     <a href="https://www.youtube.com/@moifelaym.sheriff531" title="visit our social media manager youtube page"> <img src="youtube.png" alt=""></a>
     <a href="https://www.twitter.com/@MoifelayMSherif" title="visit our social media manager twitter/x page"> <img src="twitter.png" alt=""></a>
-    <a href="https://wa.me/233264262543" title="send us your orders on Whatsapp"> <img src="whatsapp.jpg" alt=""></a>
+    <a href="" title="send us your orders on Whatsapp"> <img src="whatsapp.jpg" alt=""></a>
   </div>
 
   <footer>
