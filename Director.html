@@ -18,19 +18,18 @@
         
         nav{
             width: 100%;
-            height: 100%;
             background-color: purple; 
             text-align: center;   
         }
 
         nav b{
-            font-size: 150%;
+            font-size: 35px;
             color: rgb(9, 232, 9);
             transition: 1s;
         }
 
         nav b:hover{
-            font-size: 155%;
+            font-size: 40px;
         }
         
         nav li{
@@ -50,33 +49,6 @@
             font-size: 22px;
         }
 
-        .dropdown{
-            width: 350px;
-            display: none;
-            position: absolute;
-            z-index: 999;
-            background-color: darkslategrey;
-        }
-
-        .dropdown li{
-            display: block;
-            text-align: center;
-        }
-
-        .dropdown a{
-            font-size: 25px;
-            color: yellow;
-            transition: 1s;
-        }
-
-        .dropdown a:hover{
-            color: deeppink;
-        }
-
-        ul li:hover .dropdown{
-            display: block;
-        }
-
         h1{
             font-size: 35px;;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -84,7 +56,7 @@
         }
 
         p{
-            margin-left: 10px;
+            margin: 3%;
             font-size: 30px;
         }
 
@@ -116,11 +88,10 @@
         }
     
         footer{
-        width: 100%;
-        height: 30px;
-        background-color: black;
-        text-align: center;
-    }
+            width: 100%;
+            background-color: black;
+            text-align: center;
+        }
 
     footer li{
         display: inline-block;
@@ -135,39 +106,13 @@
         height: 100%;
     }
 
-        @media screen and (min-width: 270px) and (max-width: 950px) {
-    
-            nav li a{
-                display: block;
-                font-size: 13px;
-            }
-
-            nav a:hover{
-                font-size: 15px;
-            }
-
-            nav b{
-                display: none;
-            }
-
-            .dropdown{
-                width: 200px;
-            }
-
-            .dropdown a{
-                font-size: 13px;
-            }
-
-            .dropdown a:hover{
-                font-size: 15px;
-            }
-            
+        @media screen and (min-width: 270px) and (max-width: 1000px) {
             #bio{
                 margin: 3%;
             }
 
             .managing-team{
-                width: 500px;
+                width: 100%;
             }
             
             footer li a{
@@ -183,21 +128,8 @@
       <b> ADJOSEC INVESTMENT LIMITED </b>
       <li></li>
       <li></li>
-      <li></li>
       <li> <a href="index.html"> Home </a></li>
-      <li>
-        <a href=""> Departments </a>
-        <ul class="dropdown">
-          <li> <a href="supermarket.html"> Supermarket / Retail </a></li>
-          <li> <a href="bar.html"> Bar / Restaurant </a></li>
-          <li> <a href="wholesale.html"> Cash & Carry / Wholesale </a></li>
-          <li> <a href="TripleXhotel.html"> Triple X Hotel </a></li>
-          <li> <a href="adjosechotel.html"> Adjosec Hotel </a></li>
-        </ul>
-      </li>
-      <li> <a href="Contact.html"> Contact </a></li>
-      <li> <a href="Director.html" style="color: red;"> Managements </a></li>
-      <li> <a href="help.html"> Terms </a></li>
+      <li> <a href="#" style="color: red;"> Managements </a></li>
     </ul>
   </nav>
     <img src="Director.png" alt="C.E.O - Mr. Kwabena Owusu" style="width: 100%;">
@@ -253,8 +185,6 @@
         </div>
     </div>
     <br>
-
-    
     <footer>
     <ul>
         <ul>
