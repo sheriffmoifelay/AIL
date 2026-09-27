@@ -20,19 +20,18 @@
   
     nav{
       width: 100%;
-      height: 100%;
       background-color: purple; 
       text-align: center    
     }
 
     nav b{
-      font-size: 150%;
+      font-size: 30px;
       color: rgb(9, 232, 9);
       transition: 1s;
     }
 
     nav b:hover{
-      font-size: 155%;
+      color: blue;
     }
     
     nav li{
@@ -53,43 +52,6 @@
       font-size: 22px;
     }
     
-    .dropdown{
-      width: 350px;
-      display: none;
-      position: absolute;
-      z-index: 999;
-      background-color: darkslategrey;
-    }
-
-    .dropdown li{
-      display: block;
-      text-align: center;
-    }
-
-    .dropdown a{
-      font-size: 25px;
-      color: yellow;
-      transition: 1s;
-    }
-
-    .dropdown a:hover{
-      color: deeppink;
-    }
-
-    ul li:hover .dropdown{
-      display: block;
-    }
-    
-    .scroll{
-      width: 100%;
-      background-color: blue;
-    }
-    
-    .scroll img{
-      width: 80px;
-      height: 80px;
-    }
-    
     h1{
       text-align: center;
       color: blue;
@@ -101,7 +63,7 @@
     }
     
     p{
-      margin-left: 10px;
+      margin: 3%;
       font-size: 30px;
     }
 
@@ -174,7 +136,6 @@
 
     footer{
         width: 100%;
-        height: 100%;
         background-color: black;
         text-align: center;
     }
@@ -192,35 +153,9 @@
         height: 20px;
     }
     
-    @media screen and (min-width: 270px) and (max-width: 540px){       
-      nav li{
-        font-size: 13px;
-        margin: 5px;
-      }
-
-      nav a:hover{
-        font-size: 20px;
-      }
-
+    @media screen and (min-width: 270px) and (max-width: 1000px){       
       nav b{
-        display: none;
-      }
-
-      .dropdown{
-        width: 250px;
-      }
-
-      .dropdown li a{
-       font-size: 15px;
-      }
-        
-      .scroll{
-        height: 30px;
-      }
-        
-      .scroll img{
-        width: 30px;
-        height: 30px;
+        font-size: 25px;
       }
         
       h1{
@@ -237,13 +172,13 @@
       }
     }
 
-    @media screen and (min-width: 541px) and (max-width: 950px) {
+    @media screen and (min-width: 1001px) and (max-width: 1200px) {
       nav{
         text-align: center;
       }
 
       nav b{
-        display: none;
+        font-size: 25px;
       }
 
       nav a{
@@ -295,39 +230,16 @@
       <b> ADJOSEC INVESTMENT LIMITED </b>
       <li></li>
       <li></li>
-      <li></li>
       <li> <a href="index.html"> Home </a></li>
-      <li>
-        <a href="#"> Departments </a>
-        <ul class="dropdown">
-          <li> <a href="supermarket.html"> Supermarket / Retail </a></li>
-          <li> <a href="bar.html"> Bar / Restaurant </a></li>
-          <li> <a href="wholesale.html"> Cash & Carry / Wholesale </a></li>
-          <li> <a href="TripleXhotel.html"> Triple X Hotel </a></li>
-          <li> <a href="adjosechotel.html" style="color: red;"> Adjosec Hotel </a></li>
-        </ul>
-      </li>
-      <li> <a href="Contact.html"> Contact </a></li>
       <li> <a href="Director.html"> Managements </a></li>
-      <li> <a href="help.html"> Terms </a></li>
     </ul>
   </nav>
-  <div class="scroll">
-    <marquee behavior="alternate"> 
-      <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png">
-      <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png">
-      <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png"> 
-      <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png">
-      <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png">
-      <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png">
-    </marquee>
-  </div>
   <img src="Adjosec Annex.png" style="width: 100%;">
   <h1> ADJOSEC HOTEL </h1>
   <p>
-    At <b>Adjosec Hotel Annex </b> commonly known as Former KAAF (where KAAF University initially operated), is another hotel branch
+    At <b> Adjosec Hotel Annex </b> commonly known as Former KAAF (where KAAF University initially operated), is another hotel branch
     of ADJOSEC INVESTMENT LIMITED. It is located on Appra Road, with the GPA Address <b> CG - 0564 9921 </b> found on the map through
-    <a href="" style="text-decoration: none;"> csssd. </a> <br><br>
+    <a href="https://maps.app.goo.gl/PnjDm9pSJcjwMVRb8" style="text-decoration: none;"> XXX Annex </a> <br><br>
     It is one of the most exclusive and comfortable places to lodge due to its natural environment. It is away from the main road, in 
     cool place where anyone would need to relax his mind or have time with love ones in a quiet place. Within its compound, one find gym,
     bar, swimming pool, poultry farm, and zoo which can make ones day a meaningful one without even stepping outside of the compount.
