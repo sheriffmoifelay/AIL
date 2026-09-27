@@ -20,19 +20,18 @@
   
     nav{
       width: 100%;
-      height: 100%;
       background-color: purple; 
       text-align: center    
     }
 
     nav b{
-      font-size: 150%;
+      font-size: 30px;
       color: rgb(9, 232, 9);
       transition: 1s;
     }
 
     nav b:hover{
-      font-size: 155%;
+      font-size: 35px;
     }
     
     nav li{
@@ -53,50 +52,13 @@
       font-size: 22px;
     }
     
-    .dropdown{
-      width: 350px;
-      display: none;
-      position: absolute;
-      z-index: 999;
-      background-color: darkslategrey;
-    }
-
-    .dropdown li{
-      display: block;
-      text-align: center;
-    }
-
-    .dropdown a{
-      font-size: 25px;
-      color: yellow;
-      transition: 1s;
-    }
-
-    .dropdown a:hover{
-      color: deeppink;
-    }
-
-    ul li:hover .dropdown{
-      display: block;
-    }
-    
-    .scroll{
-      width: 100%;
-      background-color: blue;
-    }
-    
-    .scroll img{
-      width: 80px;
-      height: 80px;
-    }
-    
     h1{
       text-align: center;
       color: blue;
     }
     
     p{
-      margin-left: 10px;
+      margin: 3%;
       font-size: 30px;
     }
 
@@ -169,7 +131,6 @@
 
     footer{
         width: 100%;
-        height: 30px;
         background-color: black;
         text-align: center;
     }
@@ -187,41 +148,10 @@
         height: 20px;
     }
     
-    @media screen and (min-width: 270px) and (max-width: 540px){        
-      nav li{
-        font-size: 15px;
-        margin: 5px;
-      }
-
-      nav a:hover{
-        font-size: 20px;
-      }
-
+    @media screen and (min-width: 270px) and (max-width: 1000px){        
       nav b{
-        display: none;
+        font-size: 25px;
       }
-      
-      #nothing{
-        display: none;
-      }
-
-      .dropdown{
-        width: 250px;
-      }
-
-      .dropdown li a{
-        font-size: 15px;
-      }
-        
-      .scroll{
-        height: 30px;
-      }
-        
-      .scroll img{
-        width: 30px;
-        height: 30px;
-      }
-        
       h1{
         font-size: 22px;
       }
@@ -264,17 +194,9 @@
       }
     }
 
-    @media screen and (min-width: 541px) and (max-width: 950px) {
+    @media screen and (min-width: 1001px) and (max-width: 1200px) {
       nav{
         text-align: center;
-      }
-
-      nav b{
-        display: none;
-      }
-      
-      #nothing{
-        display: none;
       }
 
       nav a{
@@ -327,31 +249,9 @@
       <li id="nothing"></li>
       <li id="nothing"></li>
       <li> <a href="index.html"> Home </a></li>
-      <li>
-        <a href=""> Departments </a>
-        <ul class="dropdown">
-          <li> <a href="supermarket.html"> Supermarket / Retail </a></li>
-          <li> <a href="bar.html"> Bar / Restaurant </a></li>
-          <li> <a href="wholesale.html"> Cash & Carry / Wholesale </a></li>
-          <li> <a href="TripleXhotel.html" style="color: red;"> Triple X Hotel </a></li>
-          <li> <a href="adjosechotel.html"> Adjosec Hotel </a></li>
-        </ul>
-      </li>
-      <li> <a href="Contact.html"> Contact </a></li>
       <li> <a href="Director.html"> Managements </a></li>
-      <li> <a href="help.html"> Terms </a></li>
     </ul>
   </nav>
-  <div class="scroll">
-    <marquee behavior="alternate"> 
-      <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png">
-      <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png">
-      <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png"> 
-      <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png">
-      <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png">
-      <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png"> <img src="AIL.png">
-    </marquee>
-  </div>
   <img src="XXX Reception.jpg" style="width: 100%;">
   <h1 data-aos="zoom-in"> <b> TRIPLE X - HOTEL </b> </h1>
   <p data-aos="zoom-out">
