@@ -55,7 +55,6 @@
 
     .main{
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
     }
 
@@ -91,26 +90,31 @@
 
     @media screen and (min-width: 270px) and (max-width: 1000px){
 
+      body{
+        height: 100vh;
+      }
+      
       nav a{
-        font-size: 200%;
+        font-size: 220%;
       }
 
       nav b{
-        font-size: 200%;
+        font-size: 220%;
       }
 
       .sub-main{
-        width: 100%;        
+        width: 100%; 
+        margin: 10%;
+        
       }
 
       .sub-main b{
         font-size: 200%;
-        margin: 8%;
       }
       
       .sub-main li{
         font-size: 220%;
-        margin-left: 5px;
+        margin-left: 10px;
       }
       
     }
@@ -120,16 +124,15 @@
   <nav>
     <ul>
       <b> ADJOSEC INVESTMENT LIMITED </b>
-      <li> <a href="index.html"> Home </a></li>
-      <li> <a href="Director.html"> Managements </a></li>
+      <li> <a href="index.html"> Home </a>
       <li> <a href="#" id="active"> Terms </a></li>
     </ul>
   </nav>
     <div class="main">
             <div class="sub-main">
                 <b>
-                    All Employees are strictly advised to carefully understand the following regulations governing the company
-                    in keeping up with the uplifting and growth of :
+                    All interested applicants are strictly advised to carefully understand the following regulations governing the company
+                    in keeping up with its uplifting and growth while applying:
                 </b> <br><br>
                 <ol>
                     <li> An employee may be asked to bring forth a guaranteer for screening process when needed. </li><br>
